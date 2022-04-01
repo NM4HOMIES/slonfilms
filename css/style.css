@@ -1,0 +1,531 @@
+body {
+  font-family: Montserrat;
+  font-size: 16px;
+}
+/* Главные блоки */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.header {
+  margin: 20px 0 0 0;
+}
+.page {
+  flex: 1 1 auto;
+  margin: 20px 0;
+}
+.footer {
+  margin: 20px 0;
+}
+._container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.here {
+  background: rgb(248, 248, 248);
+  padding: 5px;
+  border-radius: 5px;
+}
+/* Начало шапки */
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__logo {
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+.header__logo-link {
+  color: black;
+}
+.header__menu {}
+.menu {}
+.menu__body {}
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu__item:not(:last-child) {
+  margin: 0 30px 0 0;
+}
+@media (max-width:495px) {
+  .menu__item:not(:last-child) {
+  margin: 0 10px 0 0;
+  } 
+}
+.menu__link {
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  transition-duration: 500ms;
+  transition-property: color;
+  transition-timing-function: ease-in;
+}
+@media (max-width:460px) {
+  .menu__link {
+    font-size: 14px;
+  }
+}
+.menu__link:hover {
+  color: rgb(141, 141, 141);
+}
+/* Конец шапки */
+
+/* Начало подвала */
+.footer_container {
+  display: flex;
+  justify-content: center;
+}
+.footer__text {
+  padding: 0 0 10px 0;
+}
+@media (max-width:460px) {
+  .footer__text {
+    font-size: 12px;
+  }
+}
+/* Конец подвала */
+
+/* Начало категорий */
+.page__container {
+}
+.page__category {
+}
+.category {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+  position: relative;
+  animation: superblock 600ms ease-out 1 normal 0s forwards;
+}
+
+@keyframes superblock {
+  0% {
+    top: 20px;
+    opacity: 0.5;
+  }
+  
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@media (max-width:425px) {
+  .category {
+    flex-wrap:wrap;
+    justify-content: center;
+    min-width: 100%;
+  }
+}
+
+.category__item {
+  flex: 1 1 33.3333%;
+  max-width: 33.3333%;
+  text-align: center;
+}
+
+@media (max-width:425px) {
+.category__item {
+  min-width: 90%;
+  text-align: center;
+  }
+}
+
+.category__image {
+  padding: 5px;
+}
+
+.category__image img {
+  width: 100%;
+  border-radius: 20px;
+  text-align: center;
+  opacity: 0.9;
+  transition-duration: 1s;
+  transition-property: opacity;
+  transition-delay: 500ms;
+}
+
+.category__image img:hover {
+  opacity: 1;
+}
+
+.category__title {
+  margin: 0 0 15px 0;
+}
+
+.category__title {
+  color: rgb(73, 73, 73);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.category__title:hover {
+  color: rgb(119, 119, 119);
+}
+/* Конец категорий */
+
+/* Начало - Список видео */
+
+.video__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video__item {
+  width: 33.3333%;
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .video__item {
+    min-width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .video__item {
+    min-width: 100%;
+  }
+}
+
+.video__content {
+  box-shadow: 2px 2px 10px rgb(206, 206, 206);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 1s ease 0s;
+}
+
+.video__content:hover {
+  box-shadow: 0px 0px 15px rgb(158, 158, 158);
+}
+
+.video__content {
+}
+
+.video__image {
+  width: 100%;
+  height: 210px;
+}
+
+.video__image img {
+  width: 100%;
+  height: 100%;
+  padding: 10px 0 10px 0;
+  object-fit: cover;
+}
+
+.video__subtitle {
+  padding-bottom: 10px;
+  text-align: center;;
+  color: black;
+}
+
+.video__back {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.video__image-back {
+  width: 14px;
+  position: relative;
+  top: 1px;
+}
+
+.video__back-link {
+  color: rgb(129, 129, 129);
+  font-size: 14px;
+}
+/* Конец - список видео */
+
+/* Начало -блок видео */
+.main-video__container {
+}
+.main-video__back {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+.main-video__image-back {
+  width: 10px;
+  position: relative;
+  top: 3px;
+}
+
+.main-video__title {
+  font-size: 30px;
+  text-align: center;;
+  padding: 10px 0 0 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+@media (max-width:500px) {
+  .main-video__title {
+    font-size: 20px
+  }
+}
+
+@media (max-width:320px) {
+  .main-video__title {
+    font-size: 16px;
+  }
+}
+
+.main-video__back-link {
+  font-size: 12px;
+  color: rgb(160, 160, 160);
+}
+
+.main-video__player {
+  padding: 20px 0 0 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width:1024px) {
+  .main-video__player {
+    max-width: 80%;
+  }
+}
+
+@media (max-width:768px) {
+  .main-video__player {
+    max-width: 100%;
+  }
+}
+/* Конец - блок видео */
+
+/* Начало - цены */
+.price__package {
+  display: flex;
+  flex-wrap: wrap;
+}
+.price__item {
+  padding: 2px;
+  width: 25%;
+}
+@media (max-width:768px) {
+  .price__item {
+  width: 50%;
+  }
+}
+@media (max-width:425px) {
+  .price__item {
+  width: 100%;
+  }
+}
+.price__content {
+  background-color: rgb(248, 248, 248);
+  border-radius: 20px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+@media (max-width:768px) {
+  .price__list {
+    padding: 0 20px;
+  }
+}
+.price__name {
+  text-align: center;
+  font-size: 20px;
+  padding: 20px 5px 10px 5px;
+  font-weight: 600;
+}
+.price__list {
+  font-size: 14px;
+  line-height: 28px;
+  flex: 1 1 auto;
+  height: 100%;
+}
+.price__list li {
+  list-style-type: disc;
+  
+}
+.price__cost {
+  text-align: center;
+  font-size: 20px;
+  padding: 35px 5px 10px 5px;
+  font-weight: 600;
+}
+.price__services {
+  background-color: rgb(248, 248, 248);
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 20px;
+  max-width: 100%;
+}
+.price__services h2 {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+}
+.services__list {
+  line-height: 30px;
+  font-size: 14px;
+  padding: 10px;
+}
+.price__services p {
+  font-size: 14px;
+  padding: 10px;
+}
+.bold {
+  font-weight: 600;
+}
+/* Конец - цены */
+
+/* Начало - о нас */
+.about__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about__item {
+  max-width: 50%;
+  display: flex;
+}
+
+@media (max-width:768px) {
+  .about__item {
+    max-width: 100%;
+  }
+}
+
+
+.about__info {
+  padding: 30px;
+  line-height: 22px;
+  background-color: rgb(245, 245, 245);
+}
+.about__info p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+
+.about__photo {
+  background-color: rgb(245, 245, 245);
+  display: flex;
+}
+
+.about__our-photo {
+  margin: auto 0;
+}
+.about__photo img {
+  width: 100%;
+} 
+/* Конец - о нас */
+
+/* Начало - отзывы */
+.feedback__container {
+}
+.feedback__flex-row {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.feedback__item-row {
+  width: 70%;
+  margin-bottom: 150px;
+  padding: 15px;
+  margin: 0 auto;
+}
+@media (max-width:768px) {
+  .feedback__item-row {
+  width: 95%;
+  }
+}
+.feedback__image {
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+.feedback__image img {
+  max-width: 100%;
+}
+.feedback__title {
+  text-align: center;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+.feedback__text {
+  text-align: justify;
+  font-size: 16px;
+}
+.feedback__text p {
+  margin: 0 0 10px 0;
+  text-indent: 20px;
+}
+.feedback__link {
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+.feedback__link a {
+  color: rgb(0, 102, 204);
+  font-size: 14px;
+}
+.feedback__link a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(0, 102, 204);
+}
+/* Конец - отзывы */
+
+/* Начало - контакты */
+.contacts__container {
+}
+.contacts__flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 720px;
+  margin: 0 auto;
+  background-color: rgb(251, 251, 251);
+}
+.contacts__item {
+  width: 50%;
+  text-align: center;
+}
+.contacts__item img {
+  width: 100%;
+}
+@media (max-width: 650px) {
+  .contacts__item {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+}
+.contacts__info {
+  margin: 0 auto;
+}
+.contacts__list li {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+.contacts__list a {
+  color: rgb(0, 102, 204);
+}
+
+.contacts__list a:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(0, 102, 204);
+}
+/* Конец - контакты */
+
+
+
+
+
+
+
+
+
+
+
+
+
